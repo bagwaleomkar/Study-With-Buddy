@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'app/app.dart';
+import 'services/supabase_service.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  
+  // Safely initialize Supabase configuration and services
+  await SupabaseService.initialize();
+
   runApp(const StudyWithBuddyApp());
 }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../core/constants/app_colors.dart';
+import '../../widgets/supabase_status_card.dart';
+
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -61,8 +63,11 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            const SizedBox(height: 16),
+            const SupabaseStatusCard(),
             const SizedBox(height: 24),
             Text(
+
               'Quick Overview',
               style: theme.textTheme.titleMedium?.copyWith(
                 fontWeight: FontWeight.bold,
